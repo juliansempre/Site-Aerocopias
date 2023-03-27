@@ -3,6 +3,9 @@ import { useNavigate } from "react-router-dom";
 import $ from 'jquery'
 import logo1 from '../../img/white-logo.png'
 import Header from '../../header';
+import { Button } from 'bootstrap';
+import Up from '../../img/up.png'
+
 
 
 export default function Menu(){
@@ -23,11 +26,17 @@ export default function Menu(){
     function QuemsomosA(){
         navigate("/");
         setTimeout(() => {
-           var quemsomo = document.querySelector('.quemsomosheader');
-           quemsomo.click();
+        //    var quemsomo = document.querySelector('.quemsomosheader');
+        //    quemsomo.click();
 
         }, 500);
         
+    }
+    function Su(){
+        navigate("/");
+        setTimeout(() => {
+            $('html, body'). animate({ scrollTop: 0}, 50);
+    }, 500);
     }
     function ContatoA(){
         navigate("/");
@@ -45,14 +54,12 @@ export default function Menu(){
     window.onload = function(){ 
         Header.sairDoFixo();
        }
-    
     $(window).on('scroll', function() {
         if($(window).scrollTop() > 500) {
-            $(".subira").show();
-            $(".barraFixa").show(); 
+        
+            $(".info").append("<style>.sairFixo {display:block;} .info{position:fixed; z-index: 211; background-color:rgb(0,0,0,60%);} .botmenu1{color: red;}</style>");
         }else{
-            $(".subira").hide();
-            $(".barraFixa").hide(); 
+            $(".info").append("<style>.sairFixo {display:none;} .info{position:absolute;  z-index: 211; background-color: black; display:flex;} </style>");
         }
     
     });
@@ -64,7 +71,7 @@ return(
                <img src={logo1} className='logo1'></img>
     
                 <ul className="menu">
-                <li><a onClick={Inicio}>INICIO</a></li>
+                <li><a onClick={Inicio} className='botmenu1'>INICIO</a></li>
                 <li><a className='quemsomosheader' onClick={QuemsomosA} data-bs-toggle="modal" data-bs-target="#myModal">QUEM SOMOS</a></li>
                 <li><a href='#'>
                         <div className="dropdown">
@@ -80,13 +87,16 @@ return(
                         </div>
                     
                 </a></li>
-                <li><a href='#'>BRINDES PERSONALIZADOS</a></li>
-                <li><a onClick={ContatoA}>CONTATO</a></li>
+                <li><a href='#' className='botmenu1'>BRINDES PERSONALIZADOS</a></li>
+                <li><a onClick={ContatoA} className='botmenu1'>CONTATO</a></li>
 
                 </ul>
                 <button className="zap" onClick={Header.zapbtn}>Whatsapp</button>
+                <button className='sairFixo' onClick={()=>{ $(".info").append("<style>.info{display: none;} </style>");}}> X </button>
 
             </div>
+
+            <a onClick={Su} className='subira' ><img src={Up} alt='Voltar para o topo'></img></a> 
 	</>
 )
 }

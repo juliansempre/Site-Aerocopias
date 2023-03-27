@@ -2,6 +2,7 @@ import React from 'react'
 import Topo from './header.js'
 import Slide from './slide.js'
 import Footer1 from './footer.js'
+import Bloco1 from './bloco1.js'
 import Bloco3 from './bloco3.js'
 import Bloco6 from './bloco6.js'
 import Bloco5 from './bloco5.js'
@@ -16,7 +17,7 @@ return(
   
         <header>
         <MenuMobile />
-       
+        <Bloco1 />
         
         {
         // Corpo da pagina aqui
