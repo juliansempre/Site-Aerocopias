@@ -5,7 +5,7 @@ import logo1 from '../../img/white-logo.png'
 import Header from '../../header';
 import { Button } from 'bootstrap';
 import Up from '../../img/up.png'
-
+import Dropdown from 'react-bootstrap/Dropdown';
 
 
 export default function Menu(){
@@ -74,18 +74,19 @@ return(
                 <li><a onClick={Inicio} className='botmenu1'>INICIO</a></li>
                 <li><a className='quemsomosheader' onClick={QuemsomosA} data-bs-toggle="modal" data-bs-target="#myModal">QUEM SOMOS</a></li>
                 <li><a href='#'>
-                        <div className="dropdown">
-                        <button className="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                        NOSSOS PRODUTOS
-                        </button>
-                        <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <li><button className="dropdown-item" type="button" onClick={catabtn}>Catálogo</button></li>
-                        <li><button className="dropdown-item" type="button" onClick={goToSecondPage}>Gráfica rápida</button></li>
-                        <li><button className="dropdown-item" type="button" onClick={TrPage}>Produtos</button></li>
-                        
-                        </ul>
-                        </div>
-                    
+                  
+                    <Dropdown>
+                    <Dropdown.Toggle variant="btn btn-dark" id="dropdown-basic">
+                    NOSSOS PRODUTOS
+                    </Dropdown.Toggle>
+
+                    <Dropdown.Menu>
+                    <Dropdown.Item onClick={catabtn}>Catalogo</Dropdown.Item>
+                    <Dropdown.Item onClick={goToSecondPage}>Gráfica rápida</Dropdown.Item>
+                    <Dropdown.Item onClick={TrPage}>Produtos</Dropdown.Item>
+                    </Dropdown.Menu>
+                    </Dropdown>
+                  
                 </a></li>
                 <li><a href='#' className='botmenu1'>BRINDES PERSONALIZADOS</a></li>
                 <li><a onClick={ContatoA} className='botmenu1'>CONTATO</a></li>
