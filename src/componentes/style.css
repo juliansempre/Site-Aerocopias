@@ -859,7 +859,34 @@ background-color: white;
   background-color: #04AA6D;
   color: white;
 }
+/* ////////////////////// PAGINA PRODUTOS /////////////////////// */
 
+.graficacabecalho{
+    width: 100%;
+    height: 200px;
+    background-color: black;
+    display: grid;
+    place-items: center;
+    color: #ffffff;
+    font-size: 50px;
+    font-family: touche;
+    height: 200px;
+    background-image:url(img/hero-bg.jpg);
+    background-position: top;
+    background-position-x: 0px;
+    background-position-y: -150px;
+    background-size: cover;
+    background-repeat: none;
+    
+
+}
+.graficacabecalho::after{
+    content: '';
+
+}
+.graficacabecalho p{
+    margin-top: 80px;
+}
 /* //////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////
 /////////////////         MOBILE         ////////////////////
