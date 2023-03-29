@@ -18,28 +18,28 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import {Card1, Card2, Card3, Card4, Card5, Card6, 
   Card7, Card8, Card9, Card10, Card11, Card12, 
-  Card13, Card14, Card15, Card16} from './componentesPaginas/cards.js'
+  Card13, Card14, Card15, Card16} from './componentesPaginas/cardsBrindes.js'
 
 var catalogoVer =()=>{
   window.open("https://wa.me/c/5522997161628");
 }
 
-export default function Produtos(){
+export default function Brindes(){
 	
 return(
 	<>
-
 <MenuMobile />
+  
 
-<p className='textoProdutos'>PRODUTOS</p>
-<p className='textoProdutos'>EM DESTAQUE</p>
+<p className='textoProdutos'>BRINDES</p>
+<p className='textoProdutos'>PERSONALIZADOS</p>
 
 <div className='graficacabecalho'>
 
 </div>
 
   <Menu />
- 
+    
 
 
     <div className='produtosCard'>

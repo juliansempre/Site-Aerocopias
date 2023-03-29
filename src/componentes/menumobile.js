@@ -19,6 +19,10 @@ export default function MenuMobile(){
         navigate("/Grafica");
         
     }
+    function goToBrind(){
+        navigate("/Brindes");
+        
+    }
     function TrPage(){
         navigate("/Produtos");
         
@@ -56,7 +60,7 @@ return(
     <a className="dropdown-item" type="button" onClick={catabtn}><li>CATÁLOGO</li></a>
     <a className="dropdown-item" type="button" onClick={goToSecondPage}><li>GRÁFICA RÁPIDA</li></a>
     <a className="dropdown-item" type="button" onClick={TrPage}><li>PRODUTOS</li></a>
-    <a href='#'><li>BRINDES PERSONALIZADOS</li></a>
+    <a onClick={goToBrind}><li>BRINDES PERSONALIZADOS</li></a>
     <a  href='#contatoLink'><li>CONTATO</li></a>
     </ul>
     </nav>

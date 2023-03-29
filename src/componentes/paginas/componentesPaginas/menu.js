@@ -15,6 +15,10 @@ export default function Menu(){
         navigate("/Grafica");
         
     }
+    function goToBrind(){
+        navigate("/Brindes");
+        
+    }
     function TrPage(){
         navigate("/Produtos");
         
@@ -26,17 +30,14 @@ export default function Menu(){
     function QuemsomosA(){
         navigate("/");
         setTimeout(() => {
-        //    var quemsomo = document.querySelector('.quemsomosheader');
-        //    quemsomo.click();
-
+           var quemsomo = document.querySelector('.quemsomosheader');
+           quemsomo.click();
+            
         }, 500);
         
     }
     function Su(){
-        navigate("/");
-        setTimeout(() => {
-            $('html, body'). animate({ scrollTop: 0}, 50);
-    }, 500);
+       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
     function ContatoA(){
         navigate("/");
@@ -59,7 +60,7 @@ export default function Menu(){
         
             $(".info").append("<style>.sairFixo {display:block;} .info{position:fixed; z-index: 211; background-color:rgb(0,0,0,60%);} .botmenu1{color: red;}</style>");
         }else{
-            $(".info").append("<style>.sairFixo {display:none;} .info{position:absolute;  z-index: 211; background-color: black; display:flex;} </style>");
+            $(".info").append("<style>.sairFixo {display:none;} .info{position:absolute;  z-index: 219; background-color: black; display:flex;} </style>");
         }
     
     });
@@ -88,7 +89,7 @@ return(
                     </Dropdown>
                   
                 </a></li>
-                <li><a href='#' className='botmenu1'>BRINDES PERSONALIZADOS</a></li>
+                <li><a onClick={goToBrind} className='botmenu1'>BRINDES PERSONALIZADOS</a></li>
                 <li><a onClick={ContatoA} className='botmenu1'>CONTATO</a></li>
 
                 </ul>

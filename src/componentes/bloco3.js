@@ -9,7 +9,16 @@ var oiea =()=>{
 	alert();
 }
 
+// var expmodal =()=>{
+//   var modi = document.querySelector('#meumodal');
+//   modi.click();
+  
+// }
+// expmodal();
+
+
 export default function bloco3(){
+
 return(
 	<>
 	<p>POLITICA DE QUALIDADE</p>
@@ -19,7 +28,7 @@ Estamos comprometidos em oferecer-lhes produtos e serviços personalizados com a
 
 <div className="container mt-3">
   
-  <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+  <button type="button" id='meumodal' className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
 	Saiba mais
   </button>
 </div>
