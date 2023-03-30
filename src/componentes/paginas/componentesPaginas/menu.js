@@ -9,6 +9,11 @@ import Dropdown from 'react-bootstrap/Dropdown';
 
 
 export default function Menu(){
+
+    $('.modal').on('.modal-body', function () {
+        $('.btn').trigger('focus')
+    });
+
     const navigate = useNavigate();
 
     function goToSecondPage(){
@@ -25,17 +30,25 @@ export default function Menu(){
     }
     function Inicio(){
         navigate("/");
-      
+       
+        setTimeout(() => {  $('html, body'). animate({ scrollTop: 0}, 50); }, 200);
     }
     function QuemsomosA(){
         navigate("/");
-        setTimeout(() => {
-           var quemsomo = document.querySelector('.quemsomosheader');
-           quemsomo.click();
+       var tempo = setInterval(() => {
+        
+        
+            //alert();
+                var quemsomo = document.querySelector('#meumodal');
+            quemsomo.click();
             
-        }, 500);
+
+        
+        }, 600);
+        setTimeout(() => { clearTimeout(tempo); }, 601);
         
     }
+  
     function Su(){
        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -67,13 +80,14 @@ export default function Menu(){
     
     
 return(
+    
 	<>
 	<div className='info' id='subir'>
                <img src={logo1} className='logo1'></img>
     
                 <ul className="menu">
                 <li><a onClick={Inicio} className='botmenu1'>INICIO</a></li>
-                <li><a className='quemsomosheader' onClick={QuemsomosA} data-bs-toggle="modal" data-bs-target="#myModal">QUEM SOMOS</a></li>
+                <li><a className='quemsomosheader' onClick={QuemsomosA} >QUEM SOMOS</a></li>
                 <li><a href='#'>
                   
                     <Dropdown>

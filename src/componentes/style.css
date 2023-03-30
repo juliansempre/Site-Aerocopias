@@ -882,14 +882,13 @@ background-color: white;
 .graficacabecalho{
     z-index: 0;
     width: 100%;
-    height: 200px;
+    height: 300px;
     background-color: black;
     display: grid;
     place-items: center;
     color: #ffffff;
     font-size: 50px;
     font-family: touche;
-    height: 200px;
     background-image:url(img/hero-bg.jpg);
     background-position: top;
     background-position-x: 0px;
@@ -1041,7 +1040,7 @@ background-color: white;
         font-size:12px;
     } 
     /* Bloco3 */
-    
+   
     .mae div:nth-child(3) p:nth-child(1){
     
         font-size: 20px;
@@ -1064,9 +1063,9 @@ background-color: white;
 
 }
 
-.modal-footer{height: 50px;}
-.modal-body p{margin-left: 5%; overflow:auto; font-size: 12px;  }
-.modal-content{width: 405px !important; background-color: white; left: 0px !important; transform: translateX(-5px);}
+.modal-footer{height: auto;}
+.modal-body p{margin-left: 5%; overflow:auto; font-size: 14px;  }
+.modal-content{width: 100% !important; transform: scale(0.5,0.5); background-color:white; left: 0px !important; transform: translateX(-5px);}
 .modal-title{font-size: 26px; font-weight: bold;}
 .titulomodal1{
     font-size: 16px;
@@ -1426,6 +1425,73 @@ background-color: white;
             grid-auto-rows: minmax(200px , auto);
             grid-column: 1 / -1;
         }
+        /* ////////////////////// PAGINAS MOBILE 810 /////////////////////// */
+.textoProdutos{
+    font-size: 1.8rem;
+    font-family: touche;
+    height: 200px;
+    position: absolute;
+    /* top: 10%;
+    left: 40%; */
+    /* transform: translate(-50%); */
+    color: white;
+    text-shadow: black 5px 5px 10px;
+    z-index: 3;
+}
+.textoProdutos:nth-child(3){
+    /* top: 15%;
+    left: 4%;
+    font-size: 2rem; */
+ }
+.graficacabecalho{
+    z-index: 0;
+    width: 100%;
+    height: 150px;
+    margin-bottom: 15%;
+    background-color: black;
+    display: grid;
+    place-items: center;
+    color: #ffffff;
+    font-size: 50px;
+    font-family: touche;
+    background-image:url(img/hero-bg.jpg);
+    background-position: top;
+    background-position-x: 0px;
+    background-position-y: -150px;
+    background-size: cover;
+    background-repeat: none;
+    filter: blur(15px);
+    
+
+}
+.graficacabecalho::after{
+    content: '';
+
+}
+.graficacabecalho p{
+    margin-top: 80px;
+}
+.produtosCard{
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid black; */
+    height: auto;
+    width: 100%;
+    margin: 5% 0% 5% 0%;
+    
+}
+.vermaisprodutos{
+    position: relative;
+    left: 35%;
+    transform: translateX(-50%);
+    margin-bottom: 5%;
+    width: 200px;
+}
+
+.MuiCardMedia-root:active{
+    transform: scale(101%);
+    cursor: pointer;
+}
     }
 
 /*////////////////////////////////////////////////////////////*/

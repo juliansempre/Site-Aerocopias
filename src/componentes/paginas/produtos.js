@@ -31,8 +31,7 @@ return(
 
 <MenuMobile />
 
-<p className='textoProdutos'>PRODUTOS</p>
-<p className='textoProdutos'>EM DESTAQUE</p>
+<p className='textoProdutos text-center'>PRODUTOS<br></br>EM DESTAQUE</p>
 
 <div className='graficacabecalho'>
 

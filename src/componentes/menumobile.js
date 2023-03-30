@@ -14,7 +14,21 @@ export default function MenuMobile(){
         navigate("/");
         
     }
+    function QuemsomosA(){
+        navigate("/");
+       var tempo = setInterval(() => {
+        
+        
+            //alert();
+                var quemsomo = document.querySelector('#meumodal');
+            quemsomo.click();
+            
 
+        
+        }, 600);
+        setTimeout(() => { clearTimeout(tempo); }, 601);
+        
+    }
     function goToSecondPage(){
         navigate("/Grafica");
         
@@ -44,6 +58,7 @@ export default function MenuMobile(){
         $("#mobmenu0").append("<style>#mobmenu0 img:nth-child(2){display: flex;}</style>");
         $("#mobmenu0").append("<style>#mobmenu0 img:nth-child(3){display: none;}</style>");
     }
+   
 return(
 	<>
     <div className='menumobi'  id='subir'>
@@ -56,7 +71,7 @@ return(
     <nav id='mobmenu1'>
     <ul>
     <a onClick={PriPage}><li>INICIO</li></a>
-    <a className='quemsomosheader2' data-bs-toggle="modal" data-bs-target="#myModal"><li>QUEM SOMOS</li></a>
+    <a onClick={QuemsomosA}><li>QUEM SOMOS</li></a>
     <a className="dropdown-item" type="button" onClick={catabtn}><li>CATÁLOGO</li></a>
     <a className="dropdown-item" type="button" onClick={goToSecondPage}><li>GRÁFICA RÁPIDA</li></a>
     <a className="dropdown-item" type="button" onClick={TrPage}><li>PRODUTOS</li></a>

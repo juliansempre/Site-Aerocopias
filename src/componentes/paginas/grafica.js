@@ -29,7 +29,7 @@ export default function Grafica(){
 return(
 	<>
   <MenuMobile />
-<p className='textoProdutos'>GRÁFICA RÁPIDA</p>
+<p className='textoProdutos text-center' >GRÁFICA RÁPIDA</p>
 <div className='graficacabecalho'>
 
 </div>
