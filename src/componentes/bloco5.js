@@ -43,15 +43,15 @@ Sábado de 9h às 13h
     <br/>
     <form action='envia.php' onsubmit="return verifica();" name="formu" method="POST" enctype="multipart/form-data">
         
-    <center> <input type="text" id="nome" placeholder='Digite o seu nome'></input></center>
+    <center> <input type="text" id="nome" name="nome"  placeholder='Digite o seu nome'></input></center>
         <br/>
-        <center> <input type="text" id="email" placeholder='Digite o seu e-mail'></input></center>
+        <center> <input type="text" id="senha"  name="senha" placeholder='Digite o seu e-mail'></input></center>
         <br/>
-        <center>   <input id="mensagem" type="textarea"></input></center>
+        <center>   <input name="contato" id="contato" type="textarea"></input></center>
         <br/>
         <div>
         
-        <button className='botContato btn btn-primary' onClick={testo} >Enviar</button>
+        <button className='botContato btn btn-primary' name="Enviar"  onClick={testo} >Enviar</button>
         <button className='botContato btn btn-primary'>Limpar</button>
         </div>
     </form>

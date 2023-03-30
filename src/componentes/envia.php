@@ -1,8 +1,7 @@
 <?php
 
 $website =  "Site Aerocopias";//Nome do Website
-// Aqui ficam os dados do formulário que serão enviados!!!
-
+// Aqui ficam os dados do formulário que serão enviados!!
 $nome = $_POST["nome"];//Campo Nome do Formulário
 $senha = $_POST["senha"];//Campo E-mail do Formulário
 $contato = $_POST["contato"];//Campo Contato do Formulário
@@ -22,17 +21,24 @@ $mensagem_auto = "Obrigado por entrar em contato conosco $nome!\nO mais breve po
 $assunto_auto = "Recebemos sua mensagem";
 
 
+if (empty($nome) || empty($senha) || empty($contato)) {
+    echo "<script>
+    alert('Preencha todos os campos!');
+    window.history.back();
+  </script>";
+}
+else{
 //não modifique esta linha, pois é ela que envia a mensagem!!!
 @mail($mail, $nome, $contato, "From: $senha");
 
 //não modifique esta linha, pois é ela que envia a auto_resposta!!!
 @mail($senha, $assunto_auto, $mensagem_auto, "From: $mail");
 
+echo "<script>
+alert('Email enviado com sucesso!');
+window.history.back();
+</script>";
+
+}
 
 ?>
-
-<script>
-    alert('Email enviado com sucesso!')
-    window.history.back();
-
-</script>
