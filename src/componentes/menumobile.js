@@ -41,6 +41,12 @@ export default function MenuMobile(){
         navigate("/Produtos");
         
     }
+    var contatu =()=>{
+        navigate("/");
+        setTimeout(() => {
+            $('html, body'). animate({ scrollTop: 1550}, 50);
+    }, 500);
+}
     let zapbtn=()=>{
         window.open("https://wa.me/message/GMZWBWNO434JN1");
     }
@@ -76,7 +82,7 @@ return(
     <a className="dropdown-item" type="button" onClick={goToSecondPage}><li>GRÁFICA RÁPIDA</li></a>
     <a className="dropdown-item" type="button" onClick={TrPage}><li>PRODUTOS</li></a>
     <a onClick={goToBrind}><li>BRINDES PERSONALIZADOS</li></a>
-    <a  href='#contatoLink'><li>CONTATO</li></a>
+    <a onClick={contatu}><li>CONTATO</li></a>
     </ul>
     </nav>
     </div>

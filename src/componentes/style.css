@@ -475,9 +475,11 @@ background-color: white;
   
 }
 
-#mensagem{
+#contato{
     text-align: start;
     height: 150px;
+    justify-content: top;
+    padding-left: 2%;
 }
 .contato form div {
     display: flex;
@@ -1104,6 +1106,12 @@ background-color: white;
         height: 80px;
     
     }
+   
+    .contato input:nth-child(4){
+        width: 350px;
+        height: 100px;
+    
+    }
     .contato p:nth-child(1){
         font-size: 24px;
     }
@@ -1112,6 +1120,7 @@ background-color: white;
         font-size: 16px;
     
     }
+    
     /* Bloco6 */
     /* footer */
     .rodape{

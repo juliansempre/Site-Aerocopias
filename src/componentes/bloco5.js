@@ -19,7 +19,9 @@ let testo =()=>{
     }
 
 };
-
+var EmManutencao =()=>{
+alert('Em manutenção! Você pode entrar em contato pelo whatsapp');
+}
 export default function bloco5(){
 return(
 	<>
@@ -41,7 +43,7 @@ Sábado de 9h às 13h
     
     <center> <p>Entre em contato conosco</p></center>
     <br/>
-    <form action='envia.php' onsubmit="return verifica();" name="formu" method="POST" enctype="multipart/form-data">
+    <form action='#' onsubmit="return verifica();" onClick={EmManutencao} name="formu" enctype="multipart/form-data">
         
     <center> <input type="text" id="nome" name="nome"  placeholder='Digite o seu nome'></input></center>
         <br/>
@@ -51,7 +53,7 @@ Sábado de 9h às 13h
         <br/>
         <div>
         
-        <button className='botContato btn btn-primary' name="Enviar"  onClick={testo} >Enviar</button>
+        <button className='botContato btn btn-primary' name="Enviar"  onClick={EmManutencao} >Enviar</button>
         <button className='botContato btn btn-primary'>Limpar</button>
         </div>
     </form>
