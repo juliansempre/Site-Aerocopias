@@ -43,7 +43,7 @@ Sábado de 9h às 13h
     
     <center> <p>Entre em contato conosco</p></center>
     <br/>
-    <form action='#' onsubmit="return verifica();" onClick={EmManutencao} name="formu" enctype="multipart/form-data">
+    <form action='http://localhost:3080/send-email' method="POST" >
         
     <center> <input type="text" id="nome" name="nome"  placeholder='Digite o seu nome'></input></center>
         <br/>
@@ -53,7 +53,7 @@ Sábado de 9h às 13h
         <br/>
         <div>
         
-        <button className='botContato btn btn-primary' name="Enviar"  onClick={EmManutencao} >Enviar</button>
+        <button className='botContato btn btn-primary' name="Enviar" >Enviar</button>
         <button className='botContato btn btn-primary'>Limpar</button>
         </div>
     </form>
