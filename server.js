@@ -4,7 +4,11 @@ const nodeMailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
+
 const app = express();
+
+//onde está o react
+app.use(express.static(path.join(__dirname, 'src/index')));
 
 // Add proxy middleware
 app.use(
@@ -32,6 +36,7 @@ app.post('/send-email', function (req, res) {
     res.send('<script>exibirAlerta();</script>');
     return;
   }
+  
 
   const transporter = nodeMailer.createTransport({
     host: 'smtp.gmail.com',
