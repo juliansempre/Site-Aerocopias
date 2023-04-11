@@ -5,7 +5,7 @@ import ImLogo from './img/logocolor.png'
 let testo =()=>{
     try{
         var form = document.querySelector('#contatoLink');
-        var nome = document.querySelector('nome');
+        var nome = document.querySelector('#nome');
 
         form.addEventListener('submit', function(e) {
             // alerta o valor do campo
@@ -22,7 +22,12 @@ let testo =()=>{
 var EmManutencao =()=>{
 alert('Em manutenção! Você pode entrar em contato pelo whatsapp');
 }
+
+function exibirAlerta() {
+    alert('Preencha todos os campos obrigatórios.');
+  }
 export default function bloco5(){
+
 return(
 	<>
     <div className='containerBloco5'>
@@ -43,7 +48,7 @@ Sábado de 9h às 13h
     
     <center> <p>Entre em contato conosco</p></center>
     <br/>
-    <form action='http://localhost:3080/send-email' method="POST" >
+    <form action='http://localhost:3080/send-email' method="POST" class="formulario1">
         
     <center> <input type="text" id="nome" name="nome"  placeholder='Digite o seu nome'></input></center>
         <br/>

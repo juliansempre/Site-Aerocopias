@@ -26,6 +26,13 @@ app.get('/', function (req, res) {
 });
 
 app.post('/send-email', function (req, res) {
+// validação de campo vazio
+  if (req.body.nome == "" || req.body.senha  == "" || req.body.contato == "" ) {
+    res.redirect('https://aerocopias.net/');
+    res.send('<script>exibirAlerta();</script>');
+    return;
+  }
+
   const transporter = nodeMailer.createTransport({
     host: 'smtp.gmail.com',
     //port: 465,
@@ -38,12 +45,13 @@ app.post('/send-email', function (req, res) {
       rejectUnauthorized: false,
     },
   });
+
   const mailOptions = {
-    from: '"Contato pelo site: " <aerocopiasmidia@gmail.com>', // sender address
-    to: 'aerocopias@gmail.com', // list of receivers
+    from: '"Contato pelo site: " <aerocopiasmidia@gmail.com>',
+    to: 'aerocopias@gmail.com',
     replyTo: 'juliansilvacontato@gmail.com',
-    subject: req.body.nome + ' entrou em contato pelo site', // Subject line
-    text: '', // plain text body
+    subject: req.body.nome + ' entrou em contato pelo site',
+    text: '',
     html:
       'Nome: ' + req.body.nome + '<br> Email: ' + req.body.senha + '<br> Mensagem: ' + req.body.contato,
   };
@@ -53,7 +61,7 @@ app.post('/send-email', function (req, res) {
       return console.log(error);
     }
     console.log('Message %s sent: %s', info.messageId, info.response);
-    res.redirect('http://localhost:3000/');
+    res.redirect('https://aerocopias.net/');
   });
 });
 
