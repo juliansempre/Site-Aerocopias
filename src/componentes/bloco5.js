@@ -48,17 +48,17 @@ Sábado de 9h às 13h
     
     <center> <p>Entre em contato conosco</p></center>
     <br/>
-    <form action='http://localhost:3080/send-email' method="POST" class="formulario1">
+    <form action='https://formspree.io/f/mlekollg' method="POST" class="formulario1">
         
-    <center> <input type="text" id="nome" name="nome"  placeholder='Digite o seu nome'></input></center>
+    <center> <input type="text" id="nome" name="name"  placeholder='Digite o seu nome'></input></center>
         <br/>
-        <center> <input type="text" id="senha"  name="senha" placeholder='Digite o seu e-mail'></input></center>
+        <center> <input type="text" id="senha" name="email" placeholder='Digite o seu e-mail'></input></center>
         <br/>
-        <center>   <input name="contato" id="contato" type="textarea"></input></center>
+        <center>   <input name="message" id="contato" type="textarea"></input></center>
         <br/>
         <div>
         
-        <button className='botContato btn btn-primary' name="Enviar" >Enviar</button>
+        <button className='botContato btn btn-primary' name="Enviar" type="submit">Enviar</button>
         <button className='botContato btn btn-primary'>Limpar</button>
         </div>
     </form>
