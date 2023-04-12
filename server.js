@@ -29,7 +29,7 @@ app.post('/send-email', function (req, res) {
     secure: true,
     auth: {
       user: 'aerocopiasmidia@gmail.com',
-      pass: '_senha_de_App',
+      pass: '',
     },
     tls:{
       rejectUnauthorized: false,
