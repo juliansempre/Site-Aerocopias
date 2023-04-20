@@ -48,7 +48,7 @@ export default function Bloco5(){
       email: email
     }
     // Ordem Emailjs: service | template | template params | Public key
-    emailjs.send("service_b3hdrx4","template_6q980mb", templateParams,"LhScN5B2fMz8mIjha")
+    emailjs.send("service_6a5n4a8","template_6q980mb", templateParams,"LhScN5B2fMz8mIjha")
     .then((response) => {
       console.log("EMAIL ENVIADO", response.status, response.text)
       alert("Email enviado!");
